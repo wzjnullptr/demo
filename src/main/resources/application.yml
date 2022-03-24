@@ -8,6 +8,16 @@ spring:
     url: jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
     username: root
     password: 123456
+  rabbitmq:
+    host: localhost
+    # 5672才是正确的协议连接端口
+    port: 5672
+    #虚拟主机
+    virtual-host: /mall
+    username: mall
+    password: 123456
+    publisher-confirm: true #消息发送到交换器确认
+    publisher-return: true #消息发送到队列确认
 
 # OSS相关配置信息
 aliyun:
