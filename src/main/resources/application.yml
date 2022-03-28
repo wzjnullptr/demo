@@ -51,3 +51,13 @@ mybatis:
         max-idle: 8 # 连接池中的最大空闲连接
         min-idle: 0 # 连接池中的最小空闲连接
     timeout: 3000ms # 连接超时时间（毫秒）
+
+# Elasticsearch
+# 9200端口是用来让HTTP REST API来访问ElasticSearch，而9300端口是传输层监听的默认端口
+elasticsearch:
+  ip: 127.0.0.1
+  port: 9300
+  pool: 5
+  #注意cluster.name需要与config/elasticsearch.yml中的cluster.name一致
+  cluster:
+    name: wzj-application
